@@ -1,0 +1,27 @@
+{
+  "name": "mongodb-chatbot-framework-quick-start",
+  "version": "1.0.0",
+  "description": "Quick start code for MongoDB Chatbot Framework",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "pq:manifest": "ts-node scripts/manifest.ts",
+    "pq:ingest": "npm run ingest:all --workspace=ingest",
+    "pq:publish": "ts-node scripts/publish-pqs.ts",
+    "pq:router": "ts-node scripts/router.ts",
+    "dev": "npm run dev --workspace=server & npm run dev --workspace=ui"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@apollo/generate-persisted-query-manifest": "^1.2.2",
+    "ts-node": "^10.9.2",
+    "yaml": "^2.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0"
+  }
+}
